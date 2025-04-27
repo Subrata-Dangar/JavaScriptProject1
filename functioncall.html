@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>Calculator</head>
+    <br><br>
+    <title>Calculator</title>
+    <body>
+        <input id="val1">   First Value</input><br><br>
+        <input id="val2">   Next Value</input>
+        <br>
+        <br>
+        <BUtton id="addbtn">ADD</BUtton>
+        <BUtton id="subbtn">SUB</BUtton>
+        <BUtton id="mulbtn">MUL</BUtton>
+        <BUtton id="divbtn">DIV</BUtton>
+        <P id="result">   </P>
+    </body>
+    <script>
+        document.getElementById("addbtn").onclick=add2Numbers
+        document.getElementById("subbtn").onclick=sub2Numbers
+        document.getElementById("mulbtn").onclick=mul2Numbers
+        document.getElementById("divbtn").onclick=div2Numbers
+
+        function add2Numbers()
+        {
+        let a =document.getElementById("val1").value;
+        let b= document.getElementById("val2").value;
+        let res = parseInt(a)+parseInt(b)
+        document.getElementById("result").innerHTML=res
+        document.getElementById("val1").value=res
+        document.getElementById("val2").value = null
+        }
+
+        function sub2Numbers()
+        {
+        let a =document.getElementById("val1").value;
+        let b= document.getElementById("val2").value;
+        let res = parseInt(a)-parseInt(b)
+        document.getElementById("result").innerHTML=res
+        document.getElementById("val1").value=res
+        document.getElementById("val2").value = null
+        }
+
+        function mul2Numbers()
+        {
+        let a =document.getElementById("val1").value;
+        let b= document.getElementById("val2").value;
+        let res = parseInt(a)*parseInt(b)
+        document.getElementById("result").innerHTML=res
+        document.getElementById("val1").value=res
+        document.getElementById("val2").value = null
+        }
+
+        function div2Numbers()
+        {
+        let a =document.getElementById("val1").value;
+        let b= document.getElementById("val2").value;
+        let res = parseInt(a)/parseInt(b)
+        document.getElementById("result").innerHTML=res
+        document.getElementById("val1").value=res
+        document.getElementById("val2").value = null
+        }
+    </script>
+</html>
